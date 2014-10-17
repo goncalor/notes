@@ -1,0 +1,8 @@
+
+Mirror entire site with relative paths
+
+wget -Erkpm site_to_mirror
+
+--
+
+

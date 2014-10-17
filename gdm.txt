@@ -1,0 +1,14 @@
+
+stop GDM (get to use only CLI)
+
+sudo /etc/init.d/gdm3 stop
+
+--
+
+start GDM (restore GUI)
+
+sudo /etc/init.d/gdm3 start
+
+--
+
+

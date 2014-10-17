@@ -1,0 +1,31 @@
+no Windows:
+
+1) instalar o sistema TeX no PC
+	http://miktex.org/download
+
+2) instalar um editor/compilador
+	http://www.xm1math.net/texmaker/download.html
+
+3) abrir o documento a compilar
+
+4) fazer Quick Build (F1)
+
+5) [opt.] fazer Tools > Clean (apaga todos os ficheiros excepto o .tex e o .pdf)
+
+
+
+em Macintosh:
+
+1) instalar o sistema TeX no PC
+	http://www.tug.org/mactex
+
+2 and on) same as in Windows
+
+
+
+em *nix:
+
+1) this should do
+	http://www.tug.org/texlive
+
+2 and on) same as windows

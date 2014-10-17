@@ -1,0 +1,19 @@
+intaslar PHP depois de ter instalado o apache2:
+
+apt-get install php5
+
+possivelmente fazer também (só é preciso se o comando anterior não tiver instalado logo este pacote)
+
+apt-get install libapache2-mod-php5
+
+--
+
+fazer erros serem mostrados no browser:
+
+mudar as linhas seguintes linhas do /etc/php5/apache2/php.ini
+display_errors = Off
+display_startup_errors = Off
+
+--
+
+

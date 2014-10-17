@@ -1,0 +1,16 @@
+
+enable or disable services
+
+sudo apt-get install rcconf
+sudo rcconf
+
+--
+
+disable Gnome
+
+sudo rcconf
+deselect gdm
+
+--
+
+

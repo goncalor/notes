@@ -1,0 +1,15 @@
+#!/bin/bash
+# first mount /sys/kernel/debug/ either manually or always with fstab
+# If a device/partition is not listed in fstab ONLY ROOT may mount the device/partition. Users may mount a device/partition if the device is in fstab with the proper options.
+# mount -t debugfs none /sys/kernel/debug/	(manually)
+# (via fstab) add the following to /etc/fstab
+# uid sets user id. gid sets group id
+# none    /sys/kernel/debug    debugfs    defaults    0   0
+#
+# now add the following lines to /etc/rc.local . the commands will be executed at boot and as root (it seems). putting these lines in /etc/profile.d/script_name.sh should not work due to permissions on the files inside /sys/kernel/debug/
+
+echo IGD > /sys/kernel/debug/vgaswitcheroo/switch
+echo OFF > /sys/kernel/debug/vgaswitcheroo/switch
+
+# cat /sys/kernel/debug/vgaswitcheroo/switch
+# "Pwr" indicates a connected card. "Off" indicates disconnected. Use sensors command from lm-sensors package to see temperature. Disconnected possibly shows negative temperature.

@@ -1,0 +1,45 @@
+configurar DocumentRoot:
+
+por omissão a DocumentRoot é /var/www
+para mudar para /opt/mysite
+
+sudo cp /etc/apache2/sites-available/default /etc/apache2/sites-available/mysite
+editar a linha
+DocumentRoot /var/www
+para
+DocumentRoot /opt/mysite
+e a linha
+<Directory /var/www/>
+para
+<Directory /opt/mysite/>
+guardar o ficheiro.
+não esquecer de fazer enable do site e restart do apache.
+
+--
+
+fazer enable/disable de um site:
+
+a2ensite (apache2enable site)
+a2dissite (apache2disable site)
+
+sudo a2dissite default && sudo a2ensite mysite
+
+--
+
+reload/restart do apache:
+
+sudo service apache2 reload 
+sudo service apache2 restart
+
+--
+
+garantir permissões correctas (evitar erro 403 Forbidden):
+
+fazer chmod +x em todas as pastas (não nos ficheiros) da pasta DocumentRoot. fazer também +x à pasta DocumentRoot.
+
+para ajudar a verificar as permissẽs de todo o caminho fazer:
+namei -m pasta_DocumentRoot
+
+mais info
+http://wiki.apache.org/httpd/13PermissionDenied
+

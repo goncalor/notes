@@ -1,0 +1,38 @@
+﻿inserir usb stick
+tentar identificar em que porta ficou a pen (/dev/sdX). usar por exemplo dmesg
+sudo cp debian.iso /dev/sdX	(pode demorar. cerca de 5 minutos)
+sync	??
+
+explicar como entrar no BIOS e o que há a alterar lá
+instalar Debian
+voltar a pôr o BIOS como estava
+
+--
+tentar identificar onde ficou a pen:
+
+dmesg	(logo a seguir a inseri-la)
+lsusb
+udevadm monitor --udev	(antes de a enserir)
+
+--
+
+sudo cp debian.iso /dev/sdX
+
+--
+ver conteudos de um disco/pen:
+
+sudo hd /dev/sdX -n 1024 -s offset
+
+--
+pôr um disco/pen a zeros:
+
+dd if=/dev/zero of=/dev/sdbX
+
+--
+escolher conjuntos predefinidos de software
+
+sudo tasksel
+
+--
+
+

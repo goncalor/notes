@@ -1,0 +1,19 @@
+
+making MySQL work with PHP:
+
+sudo apt-get install php5-mysql
+
+--
+
+backup and restore databases
+
+backup
+mysqldump --opt -u [uname] -p[pass] [dbname] > [backupfile.sql]
+
+restore
+mysql -u [uname] -p[pass] [db_to_restore] < [backupfile.sql]
+
+more info
+http://webcheatsheet.com/sql/mysql_backup_restore.php
+
+--

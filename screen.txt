@@ -1,0 +1,17 @@
+Rotate a screen. xrandr -q to see available screens
+
+xrandr -q
+xrandr --output LVDS1 --rotate left 
+xrandr --output LVDS1 --rotate normal
+
+--
+
+adjust screen backlight
+
+apt-get install xblacklight
+xbacklight -set percent
+
+por o comando nas startup applications para ser executado quando é feito login
+
+--
+

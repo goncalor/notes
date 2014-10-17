@@ -1,0 +1,6 @@
+
+replace expressions in files. no recursive option?
+
+sed -i 's/old-word/new-word/g' *.txt
+
+sed 's/old/new/g' input.txt > output.txt

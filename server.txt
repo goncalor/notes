@@ -1,0 +1,33 @@
+see interfaces:
+
+ifconfig
+
+--
+
+release current IPv4 address:
+
+dhclient -4 -r
+
+--
+
+lease an IPv4 address:
+
+dhclient -4 interface_name		(example: eth0)
+
+--
+
+command-line packet analyser
+
+tcpdump -i interface_name
+
+--
+
+general-purpose network configuration server::
+
+wicd-curses
+
+--
+
+send UDP/TCP, etc packages:
+
+nc [-u] host port

@@ -1,0 +1,113 @@
+Instalar o cvs:
+
+sudo apt-get install cvs
+
+--
+
+Exportar a variável CVSROOT temporariamente:
+
+export CVSROOT=caminho
+
+--
+
+Fazer com que a variável CVSROOT seja exportada ao iniciar:
+
+cd /etc/profile.d/
+sudo nano
+
+colar o seguinte
+
+#!/bin/bash
+export CVSROOT=:ext:ist173294@sigma07.ist.utl.pt:/afs/ist.utl.pt/users/9/4/ist173294/cvs
+
+guardar o ficheiro como nomedoficheiro.sh
+
+-
+outra forma (exporta para um utilizador específico quando faz login)
+editar o ~/.bash_profile ($HOME/.bash_profile) ou ~/.profile file is executed when you login using console or remotely using ssh. Type the following command to edit ~/.bash_profile file, enter:
+
+nano ~/.profile
+
+colar
+
+export PATH=${PATH}:${HOME}/bin
+
+--
+
+checkout, pull do repositório:
+
+cvs co rci
+
+ou
+
+cvs -d caminho rci		#verificar
+
+-
+checkout dos ficheiros a uma dada data:
+
+cvs co -D "2014-03-23 17:30" rci		(a hora tem que ser pelo
+menos um minuto depois da data que é mostrada no cvs history)
+
+--
+
+add, adicionar ficheiros ao repositório:
+
+cvs add nomedoficheiro
+
+--
+
+commit, push das aterações para o repositório:
+
+uma vez dentro da pasta de trabalho...
+para fazer commit de todos os ficheiros
+
+cvs commit .
+
+para um ficheiro em especial		#verificar
+
+cvs commit nomedoficheiro
+
+--
+
+verificar se falta submeter alguma alteração. limpar o directório de trabalho:
+
+fora da pasta de trabalho fazer
+
+cvs release nomedapastadetrabalho
+
+com a opção -d a pasta de trabalho é apagada após confirmação
+
+cvs release -d nomedapastadetrabalho
+
+? nomedoficheiro - o ficheiro é desconhecido do cvs
+
+--
+
+ver commits desde uma dada data:
+
+cvs history -u user -c -D 2014-3-2
+
+de todos os utilizadores
+
+cvs history -a -c -D 2009-01-20
+
+-l	ver apenas a última versão de cada ficheiro
+
+--
+
+ler mensagens de commits de ficheiros:
+
+cvs log nomes_do_ficheiros
+
+ver apenas a mensagem mais recente
+
+cvs log -d data_futura nomes_do_ficheiros
+
+--
+
+taggar todos os ficheiros na pasta (release 1.0)
+
+cvs tag rel-1-0 .
+
+--
+
