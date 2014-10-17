@@ -1,0 +1,16 @@
+
+lscpu		info about processing units
+lshw		lists information from different /proc files
+hwinfo
+lspci		lists all PCI buses and devices connected to them
+lsscsi		lists SCSI/SATA devices
+lsusb		lists USB buses and devices
+inxi
+lsblk		lists block devices (hard drive partitions and other storage devices)
+df -h		partitions space and mount points
+pydf		df written in Python (some improvements)
+fdisk -l | column -t
+mount | column -t
+free -m		RAM usage in MiB
+cat /proc/<file>
+hdparm -i /dev/sdX		info about a SATA device
