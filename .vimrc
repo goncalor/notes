@@ -7,9 +7,11 @@ set tabstop=4       " The width of a TAB is set to 4.
                     " Vim will interpret it to be having
                     " a width of 4.
 
-set ic	" ignore case in search. 'noic'
+set ic  " ignore case in search. 'noic'
 set smartcase " Use case insensitive search, except when using capital letters
-set hls	" highlight search. use 'nohls' to stop
-set is	" incremetal search: Vim editor will start searching when you type the first character of the search string
+set hls " highlight search. use 'nohls' to stop
+set is  " incremetal search: Vim editor will start searching when you type the first character of the search string
 
-set cindent	" turns on C style indentation
+" If you plan on using file type based indentation, don't set 'smartindent' or 'cindent'. You may still set 'autoindent', since it doesn't interfere.
+filetype plugin indent on
+syntax enable
