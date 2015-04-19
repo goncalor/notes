@@ -14,3 +14,4 @@ mount | column -t
 free -m		RAM usage in MiB
 cat /proc/<file>
 hdparm -i /dev/sdX		info about a SATA device
+dmesg   display messages from the kernel ring buffer
