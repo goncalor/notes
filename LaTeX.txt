@@ -3,7 +3,7 @@ no Windows:
 1) instalar o sistema TeX no PC
 	http://miktex.org/download
 
-2) instalar um editor/compilador
+2) instalar um editor
 	http://www.xm1math.net/texmaker/download.html
 
 3) abrir o documento a compilar
